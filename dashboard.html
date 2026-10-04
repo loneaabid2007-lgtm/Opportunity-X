@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Dashboard — OpportunityX</title>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="dashboard.css"
+    >
+
+</head>
+
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <a
+                href="index.html"
+                class="logo"
+            >
+                OpportunityX
+            </a>
+
+
+            <div class="nav-links">
+
+                <a href="index.html">
+                    <i class="fa-solid fa-house"></i>
+                    Home
+                </a>
+
+                <a href="index.html#results">
+                    <i class="fa-solid fa-briefcase"></i>
+                    Opportunities
+                </a>
+
+                <a href="index.html#about">
+                    <i class="fa-solid fa-circle-info"></i>
+                    About
+                </a>
+
+            </div>
+
+
+            <a
+                href="index.html#finder"
+                class="nav-cta"
+            >
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Find Opportunities
+            </a>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- ================= DASHBOARD ================= -->
+
+    <main class="dashboard-page">
+
+        <!-- ================= DASHBOARD HEADER ================= -->
+
+        <section class="dashboard-header">
+
+            <div>
+
+                <span class="dashboard-label">
+                    <i class="fa-solid fa-chart-line"></i>
+                    Student Dashboard
+                </span>
+
+                <h1>
+                    Your Opportunity Dashboard
+                </h1>
+
+                <p>
+                    Track your saved opportunities,
+                    preferences and application progress
+                    in one place.
+                </p>
+
+            </div>
+
+
+            <a
+                href="index.html#finder"
+                class="dashboard-find-btn"
+            >
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Find Opportunities
+            </a>
+
+        </section>
+
+
+
+        <!-- ================= STATS ================= -->
+
+        <section class="dashboard-stats">
+
+            <div class="dashboard-stat-card">
+
+                <div class="dashboard-stat-icon">
+                    <i class="fa-solid fa-layer-group"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        Opportunities
+                    </span>
+
+                    <strong id="dashboardTotal">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-stat-card">
+
+                <div class="dashboard-stat-icon">
+                    <i class="fa-solid fa-bookmark"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        Saved
+                    </span>
+
+                    <strong id="dashboardSaved">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-stat-card">
+
+                <div class="dashboard-stat-icon">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        Applications
+                    </span>
+
+                    <strong id="dashboardApplications">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-stat-card">
+
+                <div class="dashboard-stat-icon">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+
+                <div>
+
+                    <span>
+                        Completed
+                    </span>
+
+                    <strong id="dashboardCompleted">
+                        0
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= PROFILE ================= -->
+
+        <section class="dashboard-card">
+
+            <div class="dashboard-card-heading">
+
+                <div>
+
+                    <h2>
+                        <i class="fa-solid fa-user"></i>
+                        My Profile
+                    </h2>
+
+                    <p>
+                        Your opportunity matching preferences.
+                    </p>
+
+                </div>
+
+
+                <!-- EDIT PROFILE BUTTON -->
+
+                <button
+                    type="button"
+                    class="edit-profile-btn"
+                    id="editProfileBtn"
+                    onclick="openEditProfile()"
+                >
+
+                    <i class="fa-solid fa-pen"></i>
+
+                    Edit Profile
+
+                </button>
+
+            </div>
+
+
+            <div class="profile-grid">
+
+                <div class="profile-item">
+
+                    <span>
+                        Education
+                    </span>
+
+                    <strong id="profileEducation">
+                        Not set
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-item">
+
+                    <span>
+                        Location
+                    </span>
+
+                    <strong id="profileLocation">
+                        Not set
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-item">
+
+                    <span>
+                        Interests
+                    </span>
+
+                    <strong id="profileInterests">
+                        Not set
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-item">
+
+                    <span>
+                        Skills
+                    </span>
+
+                    <strong id="profileSkills">
+                        Not set
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= QUICK ACTIONS ================= -->
+
+        <section class="dashboard-card">
+
+            <div class="dashboard-card-heading">
+
+                <div>
+
+                    <h2>
+                        <i class="fa-solid fa-bolt"></i>
+                        Quick Actions
+                    </h2>
+
+                    <p>
+                        Continue exploring opportunities.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-actions">
+
+                <a
+                    href="index.html#finder"
+                    class="dashboard-action"
+                >
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <div>
+
+                        <strong>
+                            Find Opportunities
+                        </strong>
+
+                        <span>
+                            Discover opportunities matching your profile.
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <a
+                    href="index.html#saved"
+                    class="dashboard-action"
+                >
+
+                    <i class="fa-solid fa-bookmark"></i>
+
+                    <div>
+
+                        <strong>
+                            Saved Opportunities
+                        </strong>
+
+                        <span>
+                            View opportunities you saved.
+                        </span>
+
+                    </div>
+
+                </a>
+
+
+                <button
+                    type="button"
+                    class="dashboard-action"
+                    id="openTrackerBtn"
+                >
+
+                    <i class="fa-solid fa-list-check"></i>
+
+                    <div>
+
+                        <strong>
+                            Application Tracker
+                        </strong>
+
+                        <span>
+                            Track opportunities you want to apply for.
+                        </span>
+
+                    </div>
+
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= RECENT SAVED ================= -->
+
+        <section class="dashboard-card">
+
+            <div class="dashboard-card-heading">
+
+                <div>
+
+                    <h2>
+                        <i class="fa-solid fa-bookmark"></i>
+                        Recent Saved Opportunities
+                    </h2>
+
+                    <p>
+                        Your recently saved opportunities.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="index.html#saved"
+                    class="dashboard-view-all"
+                >
+                    View All
+                </a>
+
+            </div>
+
+
+            <div
+                class="dashboard-saved-list"
+                id="dashboardSavedList"
+            >
+            </div>
+
+
+            <div
+                class="dashboard-empty"
+                id="dashboardSavedEmpty"
+            >
+
+                <i class="fa-regular fa-bookmark"></i>
+
+                <h3>
+                    No saved opportunities yet
+                </h3>
+
+                <p>
+                    Save an opportunity from the finder
+                    and it will appear here.
+                </p>
+
+                <a
+                    href="index.html#finder"
+                    class="dashboard-empty-btn"
+                >
+                    Find Opportunities
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+<!-- ================= EDIT PROFILE MODAL ================= -->
+
+<div
+    class="edit-profile-modal"
+    id="editProfileModal"
+>
+
+    <div class="edit-profile-box">
+
+        <!-- Close Button -->
+        <button
+            type="button"
+            class="edit-profile-close"
+            onclick="closeEditProfile()"
+            aria-label="Close"
+        >
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+
+        <!-- Header -->
+        <div class="edit-profile-header">
+
+            <div class="edit-profile-icon">
+                <i class="fa-solid fa-user-pen"></i>
+            </div>
+
+            <div>
+
+                <h2>
+                    Edit Profile
+                </h2>
+
+                <p>
+                    Update your preferences to get better
+                    opportunity matches.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Form -->
+        <form
+            id="editProfileForm"
+            class="edit-profile-form"
+        >
+
+            <!-- Education -->
+            <div class="edit-profile-field">
+
+                <label for="editEducation">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    Education Level
+                </label>
+
+                <select id="editEducation">
+
+                    <option value="">
+                        Select education level
+                    </option>
+
+                    <option value="Class 10">
+                        Class 10
+                    </option>
+
+                    <option value="Class 12">
+                        Class 12
+                    </option>
+
+                    <option value="Undergraduate">
+                        Undergraduate
+                    </option>
+
+                    <option value="Postgraduate">
+                        Postgraduate
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Location -->
+            <div class="edit-profile-field">
+
+                <label for="editLocation">
+                    <i class="fa-solid fa-location-dot"></i>
+                    Location
+                </label>
+
+                <input
+                    type="text"
+                    id="editLocation"
+                    placeholder="e.g. Anantnag, Jammu & Kashmir"
+                >
+
+            </div>
+
+
+            <!-- Interests -->
+            <div class="edit-profile-field">
+
+                <label for="editInterests">
+                    <i class="fa-solid fa-heart"></i>
+                    Interests
+                </label>
+
+                <input
+                    type="text"
+                    id="editInterests"
+                    placeholder="e.g. Technology, Healthcare, Science"
+                >
+
+                <small>
+                    Separate multiple interests with commas.
+                </small>
+
+            </div>
+
+
+            <!-- Skills -->
+            <div class="edit-profile-field">
+
+                <label for="editSkills">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    Skills
+                </label>
+
+                <input
+                    type="text"
+                    id="editSkills"
+                    placeholder="e.g. HTML, CSS, Writing"
+                >
+
+                <small>
+                    Separate multiple skills with commas.
+                </small>
+
+            </div>
+
+
+            <!-- Buttons -->
+            <div class="edit-profile-actions">
+
+                <button
+                    type="button"
+                    class="edit-profile-cancel"
+                    onclick="closeEditProfile()"
+                >
+                    Cancel
+                </button>
+
+
+                <button
+                    type="submit"
+                    class="edit-profile-save"
+                >
+                    <i class="fa-solid fa-check"></i>
+                    Save Profile
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+    <!-- ================= APPLICATION TRACKER MODAL ================= -->
+
+<div
+    class="tracker-modal"
+    id="trackerModal"
+>
+
+    <div class="tracker-modal-box">
+
+        <!-- Close -->
+        <button
+            type="button"
+            class="tracker-close"
+            onclick="closeApplicationTracker()"
+            aria-label="Close"
+        >
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+
+
+        <!-- Header -->
+        <div class="tracker-header">
+
+            <div class="tracker-header-icon">
+                <i class="fa-solid fa-list-check"></i>
+            </div>
+
+            <div>
+
+                <h2>
+                    Application Tracker
+                </h2>
+
+                <p>
+                    Track the opportunities you want to apply for.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Tracker Stats -->
+
+        <div class="tracker-stats">
+
+            <div class="tracker-stat">
+
+                <strong id="trackerTotal">
+                    0
+                </strong>
+
+                <span>
+                    Total
+                </span>
+
+            </div>
+
+
+            <div class="tracker-stat">
+
+                <strong id="trackerApplied">
+                    0
+                </strong>
+
+                <span>
+                    Applied
+                </span>
+
+            </div>
+
+
+            <div class="tracker-stat">
+
+                <strong id="trackerPending">
+                    0
+                </strong>
+
+                <span>
+                    Pending
+                </span>
+
+            </div>
+
+
+            <div class="tracker-stat">
+
+                <strong id="trackerCompleted">
+                    0
+                </strong>
+
+                <span>
+                    Completed
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- Add Opportunity -->
+
+        <div class="tracker-add-section">
+
+            <h3>
+                <i class="fa-solid fa-plus"></i>
+                Add Opportunity
+            </h3>
+
+
+            <div class="tracker-add-form">
+
+                <input
+                    type="text"
+                    id="trackerOpportunity"
+                    placeholder="Enter opportunity name"
+                >
+
+
+                <input
+                    type="date"
+                    id="trackerDeadline"
+                >
+
+
+                <button
+                    type="button"
+                    id="addTrackerBtn"
+                    onclick="addApplicationToTracker()"
+                >
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Add
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Application List -->
+
+        <div class="tracker-list-section">
+
+            <div class="tracker-list-heading">
+
+                <h3>
+                    Your Applications
+                </h3>
+
+            </div>
+
+
+            <div
+                class="tracker-list"
+                id="applicationTrackerList"
+            >
+            </div>
+
+
+            <!-- Empty State -->
+
+            <div
+                class="tracker-empty"
+                id="trackerEmpty"
+            >
+
+                <i class="fa-regular fa-folder-open"></i>
+
+                <h3>
+                    No applications yet
+                </h3>
+
+                <p>
+                    Add an opportunity above to start
+                    tracking your applications.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-content">
+
+            <strong>
+                OpportunityX
+            </strong>
+
+            <p>
+                Helping students discover the right
+                opportunities.
+            </p>
+
+            <span>
+                © 2026 OpportunityX. All rights reserved.
+            </span>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="script.js"></script>
+
+    <script src="dashboard.js"></script>
+
+</body>
+
+</html>

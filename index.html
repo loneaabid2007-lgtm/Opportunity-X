@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>OpportunityX — Find Your Opportunity</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- ================= NAVBAR ================= -->
+
+    <header class="navbar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-compass"></i>
+
+            <span>OpportunityX</span>
+
+        </div>
+
+
+        <nav>
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#opportunities">
+                Opportunities
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="#saved">
+                <i class="fa-regular fa-bookmark"></i>
+                Saved
+                <span id="savedCount">0</span>
+            </a>
+
+        </nav>
+
+
+        <button class="nav-btn"
+                onclick="findOpportunities()">
+
+            Find Opportunities
+
+        </button>
+
+    </header>
+
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+
+        <!-- ================= HERO ================= -->
+
+        <section class="hero"
+                 id="home">
+
+
+            <div class="hero-content">
+
+
+                <span class="hero-label">
+
+                    <i class="fa-solid fa-bolt"></i>
+
+                    STUDENT OPPORTUNITY FINDER
+
+                </span>
+
+
+                <h1>
+
+                    Find the right
+
+                    <span>
+                        opportunities
+                    </span>
+
+                    for your future.
+
+                </h1>
+
+
+                <p>
+
+                    Discover scholarships, internships,
+                    competitions, government opportunities
+                    and more — all based on your education,
+                    interests and skills.
+
+                </p>
+
+
+                <div class="hero-buttons">
+
+
+                    <button class="primary-btn"
+                            onclick="findOpportunities()">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        Find Opportunities
+
+                    </button>
+
+
+                    <button class="secondary-btn"
+                            onclick="exploreOpportunities()">
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                        Explore Opportunities
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- HERO CARD -->
+
+            <div class="hero-card">
+
+
+                <div class="card-top">
+
+                    <span>
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Opportunities for you
+
+                    </span>
+
+
+                    <i class="fa-solid fa-ellipsis"></i>
+
+                </div>
+
+
+
+                <div class="opportunity-preview">
+
+
+                    <div class="preview-icon scholarship">
+
+                        <i class="fa-solid fa-graduation-cap"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Scholarships
+                        </h3>
+
+                        <p>
+                            Find financial support
+                        </p>
+
+                    </div>
+
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                </div>
+
+
+
+                <div class="opportunity-preview">
+
+
+                    <div class="preview-icon internship">
+
+                        <i class="fa-solid fa-briefcase"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Internships
+                        </h3>
+
+                        <p>
+                            Build real-world skills
+                        </p>
+
+                    </div>
+
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                </div>
+
+
+
+                <div class="opportunity-preview">
+
+
+                    <div class="preview-icon competition">
+
+                        <i class="fa-solid fa-trophy"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+                            Competitions
+                        </h3>
+
+                        <p>
+                            Show your talent
+                        </p>
+
+                    </div>
+
+
+                    <i class="fa-solid fa-chevron-right"></i>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= CATEGORIES ================= -->
+
+        <section class="categories"
+                 id="opportunities">
+
+
+            <div class="section-heading">
+
+                <span>
+                    EXPLORE
+                </span>
+
+
+                <h2>
+                    Opportunities for every goal
+                </h2>
+
+
+                <p>
+
+                    Choose what you are looking for and
+                    discover opportunities that match
+                    your goals.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="category-grid">
+
+
+                <!-- Scholarship -->
+
+                <div class="category-card"
+                     onclick="selectCategory('Scholarship')">
+
+                    <i class="fa-solid fa-graduation-cap"></i>
+
+                    <h3>
+                        Scholarships
+                    </h3>
+
+                    <p>
+
+                        Find scholarships and financial
+                        aid for your education.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- Internship -->
+
+                <div class="category-card"
+                     onclick="selectCategory('Internship')">
+
+                    <i class="fa-solid fa-briefcase"></i>
+
+                    <h3>
+                        Internships
+                    </h3>
+
+                    <p>
+
+                        Gain experience and develop
+                        professional skills.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- Competition -->
+
+                <div class="category-card"
+                     onclick="selectCategory('Competition')">
+
+                    <i class="fa-solid fa-trophy"></i>
+
+                    <h3>
+                        Competitions
+                    </h3>
+
+                    <p>
+
+                        Participate in challenges,
+                        hackathons and competitions.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- Government -->
+
+                <div class="category-card"
+                     onclick="selectCategory('Government')">
+
+                    <i class="fa-solid fa-building-columns"></i>
+
+                    <h3>
+                        Government
+                    </h3>
+
+                    <p>
+
+                        Discover government schemes
+                        and opportunities.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- Fellowship -->
+
+                <div class="category-card"
+                     onclick="selectCategory('Fellowship')">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <h3>
+                        Fellowships
+                    </h3>
+
+                    <p>
+
+                        Explore fellowships and
+                        development programs.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- Course -->
+
+                <div class="category-card"
+                     onclick="selectCategory('Course')">
+
+                    <i class="fa-solid fa-book-open"></i>
+
+                    <h3>
+                        Courses
+                    </h3>
+
+                    <p>
+
+                        Find programs that help you
+                        build new skills.
+
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ================= ABOUT ================= -->
+
+        <section class="about"
+                 id="about">
+
+
+            <div class="about-icon">
+
+                <i class="fa-solid fa-lightbulb"></i>
+
+            </div>
+
+
+            <div>
+
+                <span>
+                    OUR MISSION
+                </span>
+
+
+                <h2>
+
+                    Opportunities shouldn't be
+                    hard to find.
+
+                </h2>
+
+
+                <p>
+
+                    OpportunityX brings useful student
+                    opportunities into one simple platform,
+                    helping students discover what is relevant
+                    to them and understand how to apply.
+
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= OPPORTUNITY FINDER ================= -->
+
+        <section class="finder"
+                 id="finder">
+
+
+            <div class="finder-heading">
+
+
+                <span>
+                    PERSONALIZED SEARCH
+                </span>
+
+
+                <h2>
+                    Find opportunities made for you
+                </h2>
+
+
+                <p>
+
+                    Tell us a little about yourself and
+                    we will help you discover opportunities
+                    that match your profile.
+
+                </p>
+
+
+            </div>
+
+<!-- ================= ADVANCED FILTERS ================= -->
+
+<div class="advanced-filters">
+
+    <div class="filter-heading">
+        <div>
+            <h3>
+                <i class="fa-solid fa-sliders"></i>
+                Advanced Filters
+            </h3>
+
+            <p>
+                Narrow down opportunities based on your preferences.
+            </p>
+        </div>
+    </div>
+
+    <div class="filters-grid">
+
+        <!-- Search -->
+        <div class="filter-group">
+            <label for="searchKeyword">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Search
+            </label>
+
+            <input
+                type="text"
+                id="searchKeyword"
+                placeholder="Search opportunities..."
+            >
+        </div>
+
+
+        <!-- Opportunity Type -->
+        <div class="filter-group">
+            <label for="filterType">
+                <i class="fa-solid fa-layer-group"></i>
+                Opportunity Type
+            </label>
+
+            <select id="filterType">
+
+                <option value="all">
+                    All Types
+                </option>
+
+                <option value="Scholarship">
+                    Scholarship
+                </option>
+
+                <option value="Internship">
+                    Internship
+                </option>
+
+                <option value="Competition">
+                    Competition
+                </option>
+
+                <option value="Government">
+                    Government
+                </option>
+
+                <option value="Fellowship">
+                    Fellowship
+                </option>
+
+                <option value="Course">
+                    Course
+                </option>
+
+            </select>
+        </div>
+
+
+        <!-- Education -->
+        <div class="filter-group">
+            <label for="filterEducation">
+                <i class="fa-solid fa-graduation-cap"></i>
+                Education
+            </label>
+
+            <select id="filterEducation">
+
+                <option value="all">
+                    All Education Levels
+                </option>
+
+                <option value="Class 10">
+                    Class 10
+                </option>
+
+                <option value="Class 12">
+                    Class 12
+                </option>
+
+                <option value="Undergraduate">
+                    Undergraduate
+                </option>
+
+                <option value="Postgraduate">
+                    Postgraduate
+                </option>
+
+            </select>
+        </div>
+
+
+        <!-- Location -->
+        <div class="filter-group">
+            <label for="filterLocation">
+                <i class="fa-solid fa-location-dot"></i>
+                Location
+            </label>
+
+            <input
+                type="text"
+                id="filterLocation"
+                placeholder="e.g. Jammu, Kashmir, India"
+            >
+        </div>
+
+
+        <!-- Sort -->
+        <div class="filter-group">
+            <label for="sortOpportunities">
+                <i class="fa-solid fa-arrow-down-wide-short"></i>
+                Sort By
+            </label>
+
+            <select id="sortOpportunities">
+
+                <option value="match">
+                    Best Match
+                </option>
+
+                <option value="deadline">
+                    Deadline
+                </option>
+
+                <option value="title">
+                    A-Z
+                </option>
+
+            </select>
+        </div>
+
+    </div>
+
+
+    <!-- Clear Filters -->
+
+    <button
+        type="button"
+        class="clear-filters-btn"
+        onclick="clearAdvancedFilters()"
+    >
+        <i class="fa-solid fa-rotate-left"></i>
+        Clear Filters
+    </button>
+
+</div>
+
+            <!-- FINDER FORM -->
+
+            <form class="finder-form"
+                  id="opportunityForm">
+
+
+                <!-- EDUCATION -->
+
+                <div class="form-group">
+
+                    <label for="education">
+
+                        <i class="fa-solid fa-graduation-cap"></i>
+
+                        Education
+
+                    </label>
+
+
+                    <select id="education"
+                            name="education"
+                            required>
+
+                        <option value="">
+                            Select your education
+                        </option>
+
+                        <option value="Class 10">
+                            Class 10
+                        </option>
+
+                        <option value="Class 12">
+                            Class 12
+                        </option>
+
+                        <option value="Undergraduate">
+                            Undergraduate
+                        </option>
+
+                        <option value="Postgraduate">
+                            Postgraduate
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- LOCATION -->
+
+                <div class="form-group">
+
+                    <label for="location">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        Location
+
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="location"
+                        name="location"
+                        placeholder="Enter your state or city"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- INTEREST -->
+
+                <div class="form-group">
+
+                    <label for="interest">
+
+                        <i class="fa-solid fa-heart"></i>
+
+                        Interest
+
+                    </label>
+
+
+                    <select id="interest"
+                            name="interest"
+                            required>
+
+                        <option value="">
+                            Select your interest
+                        </option>
+
+                        <option value="Technology">
+                            Technology
+                        </option>
+
+                        <option value="Healthcare">
+                            Healthcare
+                        </option>
+
+                        <option value="Business">
+                            Business
+                        </option>
+
+                        <option value="Education">
+                            Education
+                        </option>
+
+                        <option value="Design">
+                            Design
+                        </option>
+
+                        <option value="Science">
+                            Science
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- SKILLS -->
+
+                <div class="form-group">
+
+                    <label for="skills">
+
+                        <i class="fa-solid fa-code"></i>
+
+                        Skills
+
+                    </label>
+
+
+                    <input
+                        type="text"
+                        id="skills"
+                        name="skills"
+                        placeholder="e.g. Coding, Writing, Design"
+                        required
+                    >
+
+                </div>
+
+
+
+                <!-- OPPORTUNITY TYPE -->
+
+                <div class="form-group">
+
+                    <label for="opportunityType">
+
+                        <i class="fa-solid fa-bullseye"></i>
+
+                        Looking for
+
+                    </label>
+
+
+                    <select
+                        id="opportunityType"
+                        name="opportunityType"
+                        required
+                    >
+
+                        <option value="">
+                            Select opportunity type
+                        </option>
+
+                        <option value="Scholarship">
+                            Scholarship
+                        </option>
+
+                        <option value="Internship">
+                            Internship
+                        </option>
+
+                        <option value="Competition">
+                            Competition
+                        </option>
+
+                        <option value="Government">
+                            Government Opportunity
+                        </option>
+
+                        <option value="Fellowship">
+                            Fellowship
+                        </option>
+
+                        <option value="Course">
+                            Course / Program
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+
+                <!-- SUBMIT -->
+
+                <button
+                    type="submit"
+                    class="finder-submit"
+                >
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    Find Matching Opportunities
+
+                </button>
+
+
+            </form>
+
+
+        </section>
+
+
+
+        <!-- ================= OPPORTUNITY RESULTS ================= -->
+
+        <section class="results"
+                 id="results">
+
+
+            <div class="results-heading">
+
+                <span>
+                    MATCHED OPPORTUNITIES
+                </span>
+
+
+                <h2>
+                    Opportunities for you
+                </h2>
+
+
+                <p id="resultsMessage">
+
+                    Complete your profile to discover
+                    opportunities that match your goals.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="results-grid"
+                 id="resultsGrid">
+            </div>
+
+
+
+            <div class="no-results"
+                 id="noResults">
+
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+
+                <h3>
+                    No opportunities found
+                </h3>
+
+
+                <p>
+
+                    Try changing your preferences
+                    and search again.
+
+                </p>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- ================= SAVED OPPORTUNITIES ================= -->
+
+        <section class="saved-section"
+                 id="saved">
+
+
+            <div class="saved-heading">
+
+                <span>
+                    SAVED OPPORTUNITIES
+                </span>
+
+
+                <h2>
+                    Your saved opportunities
+                </h2>
+
+
+                <p id="savedMessage">
+
+                    Opportunities you save will appear here.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="saved-grid"
+                 id="savedGrid">
+            </div>
+
+
+
+            <div class="saved-empty"
+                 id="savedEmpty">
+
+                <i class="fa-regular fa-bookmark"></i>
+
+
+                <h3>
+                    No saved opportunities
+                </h3>
+
+
+                <p>
+
+                    Bookmark an opportunity and it will
+                    appear here.
+
+                </p>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+<!-- ================= OPPORTUNITY DETAILS MODAL ================= -->
+
+<div class="details-modal"
+     id="detailsModal">
+
+
+    <div class="details-modal-box">
+
+
+        <!-- CLOSE -->
+
+        <button
+            class="details-modal-close"
+            onclick="closeOpportunityDetails()"
+            aria-label="Close"
+        >
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+
+        <!-- ICON -->
+
+        <div class="details-modal-icon">
+
+            <i id="modalIcon"
+               class="fa-solid fa-graduation-cap">
+            </i>
+
+        </div>
+
+
+
+        <!-- TYPE -->
+
+        <span class="modal-type"
+              id="modalType">
+
+            Opportunity
+
+        </span>
+
+
+
+        <!-- TITLE -->
+
+        <h2 id="modalTitle">
+
+            Opportunity Title
+
+        </h2>
+
+
+
+        <!-- DESCRIPTION -->
+
+        <p id="modalDescription">
+
+            Opportunity description
+
+        </p>
+
+
+
+        <!-- VERIFICATION -->
+
+        <div class="modal-verification">
+
+
+            <div class="verified-source">
+
+                <i class="fa-solid fa-circle-check"></i>
+
+                Verified Official Source
+
+                <span class="source-name"
+                      id="modalSource">
+
+                    • Official Source
+
+                </span>
+
+            </div>
+
+
+            <div class="verified-date">
+
+                <i class="fa-regular fa-clock"></i>
+
+                Verified
+                <span id="modalVerifiedDate">
+                    -
+                </span>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- DETAILS -->
+
+        <div class="modal-details">
+
+
+            <!-- ELIGIBILITY -->
+
+            <div class="modal-detail-item">
+
+                <i class="fa-solid fa-user-check"></i>
+
+                <div>
+
+                    <span>
+                        Eligibility
+                    </span>
+
+                    <strong id="modalEligibility">
+                        -
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DOCUMENTS -->
+
+            <div class="modal-detail-item">
+
+                <i class="fa-solid fa-file-lines"></i>
+
+                <div>
+
+                    <span>
+                        Documents Required
+                    </span>
+
+                    <strong id="modalDocuments">
+                        -
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DEADLINE -->
+
+            <div class="modal-detail-item">
+
+                <i class="fa-regular fa-calendar"></i>
+
+                <div>
+
+                    <span>
+                        Deadline
+                    </span>
+
+                    <strong id="modalDeadline">
+                        -
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- BENEFITS -->
+
+            <div class="modal-detail-item">
+
+                <i class="fa-solid fa-gift"></i>
+
+                <div>
+
+                    <span>
+                        Benefits
+                    </span>
+
+                    <strong id="modalBenefits">
+                        -
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- LOCATION -->
+
+            <div class="modal-detail-item">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                <div>
+
+                    <span>
+                        Location
+                    </span>
+
+                    <strong id="modalLocation">
+                        -
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- HOW TO APPLY -->
+
+            <div class="modal-detail-item">
+
+                <i class="fa-solid fa-list-check"></i>
+
+                <div>
+
+                    <span>
+                        How to Apply
+                    </span>
+
+                    <strong id="modalHowToApply">
+                        Visit the official source and follow the application instructions.
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- OFFICIAL SOURCE -->
+
+        <a
+            href="#"
+            id="modalSourceLink"
+            class="modal-source-link"
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            Visit Official Source
+
+        </a>
+
+
+
+        <!-- APPLY -->
+
+        <button
+            class="modal-apply-btn"
+            id="modalApplyBtn"
+        >
+
+            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+
+            Apply Now
+
+        </button>
+
+
+    </div>
+
+</div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+
+        <div class="logo">
+
+            <i class="fa-solid fa-compass"></i>
+
+            <span>
+                OpportunityX
+            </span>
+
+        </div>
+
+
+        <p>
+
+            Helping students discover better
+            opportunities.
+
+        </p>
+
+
+        <p class="copyright">
+
+            © 2026 OpportunityX.
+            All rights reserved.
+
+        </p>
+
+
+    </footer>
+
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>

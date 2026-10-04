@@ -1,0 +1,1728 @@
+/* ================= DASHBOARD PAGE ================= */
+
+.dashboard-page {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 50px 20px 70px;
+}
+
+
+/* ================= HEADER ================= */
+
+.dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    margin-bottom: 35px;
+}
+
+.dashboard-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    margin-bottom: 10px;
+    color: #1769aa;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.dashboard-header h1 {
+    margin: 0 0 10px;
+    color: #263238;
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+.dashboard-header p {
+    max-width: 650px;
+    margin: 0;
+    color: #68737d;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.dashboard-find-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-shrink: 0;
+    padding: 12px 17px;
+    border-radius: 9px;
+    background: #1769aa;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+.dashboard-find-btn:hover {
+    background: #12598f;
+    transform: translateY(-1px);
+}
+
+
+/* ================= STATS ================= */
+
+.dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 25px;
+}
+
+.dashboard-stat-card {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 18px;
+    border: 1px solid #e4e9ee;
+    border-radius: 12px;
+    background: #ffffff;
+}
+
+.dashboard-stat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 43px;
+    height: 43px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #eef7ff;
+    color: #1769aa;
+}
+
+.dashboard-stat-icon i {
+    font-size: 17px;
+}
+
+.dashboard-stat-card span {
+    display: block;
+    margin-bottom: 4px;
+    color: #68737d;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.dashboard-stat-card strong {
+    display: block;
+    color: #263238;
+    font-size: 22px;
+}
+
+
+/* ================= DASHBOARD CARD ================= */
+
+.dashboard-card {
+    margin-bottom: 22px;
+    padding: 24px;
+    border: 1px solid #e4e9ee;
+    border-radius: 14px;
+    background: #ffffff;
+}
+
+.dashboard-card-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.dashboard-card-heading h2 {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin: 0 0 5px;
+    color: #263238;
+    font-size: 18px;
+}
+
+.dashboard-card-heading h2 i {
+    color: #1769aa;
+}
+
+.dashboard-card-heading p {
+    margin: 0;
+    color: #68737d;
+    font-size: 13px;
+}
+
+
+/* ================= PROFILE ================= */
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.profile-item {
+    padding: 15px;
+    border: 1px solid #e7edf3;
+    border-radius: 10px;
+    background: #f8fafc;
+}
+
+.profile-item span {
+    display: block;
+    margin-bottom: 6px;
+    color: #68737d;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.profile-item strong {
+    display: block;
+    color: #263238;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.dashboard-edit-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 9px 13px;
+    border: 1px solid #d9e0e6;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #52606d;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.dashboard-edit-btn:hover {
+    background: #f5f7fa;
+}
+
+
+/* ================= QUICK ACTIONS ================= */
+
+.dashboard-actions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 13px;
+}
+
+.dashboard-action {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    min-width: 0;
+    padding: 16px;
+    border: 1px solid #e4e9ee;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #263238;
+    text-decoration: none;
+    font-family: inherit;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.dashboard-action:hover {
+    border-color: #b9cfe0;
+    background: #f8fbfd;
+    transform: translateY(-1px);
+}
+
+.dashboard-action > i {
+    flex-shrink: 0;
+    margin-top: 3px;
+    color: #1769aa;
+    font-size: 16px;
+}
+
+.dashboard-action strong {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
+
+.dashboard-action span {
+    display: block;
+    color: #68737d;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* ================= SAVED OPPORTUNITIES ================= */
+
+.dashboard-saved-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 13px;
+}
+
+.dashboard-saved-item {
+    padding: 16px;
+    border: 1px solid #e4e9ee;
+    border-radius: 10px;
+    background: #f8fafc;
+}
+
+.dashboard-saved-item h3 {
+    margin: 0 0 7px;
+    color: #263238;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.dashboard-saved-item p {
+    margin: 0 0 10px;
+    color: #68737d;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.dashboard-saved-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #52606d;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.dashboard-saved-meta i {
+    margin-right: 4px;
+    color: #1769aa;
+}
+
+
+/* ================= VIEW ALL ================= */
+
+.dashboard-view-all {
+    color: #1769aa;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.dashboard-view-all:hover {
+    text-decoration: underline;
+}
+
+
+/* ================= EMPTY STATE ================= */
+
+.dashboard-empty {
+    padding: 35px 20px;
+    text-align: center;
+    border: 1px dashed #d8e0e7;
+    border-radius: 10px;
+    background: #fafcfd;
+}
+
+.dashboard-empty i {
+    margin-bottom: 10px;
+    color: #9aa4ad;
+    font-size: 28px;
+}
+
+.dashboard-empty h3 {
+    margin: 0 0 7px;
+    color: #39444d;
+    font-size: 15px;
+}
+
+.dashboard-empty p {
+    max-width: 430px;
+    margin: 0 auto 16px;
+    color: #68737d;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.dashboard-empty-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background: #1769aa;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 900px) {
+
+    .dashboard-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dashboard-actions {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .dashboard-find-btn {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .dashboard-page {
+        padding: 35px 15px 50px;
+    }
+
+    .dashboard-header h1 {
+        font-size: 25px;
+    }
+
+    .dashboard-header p {
+        font-size: 13px;
+    }
+
+    .dashboard-stats {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .dashboard-stat-card {
+        padding: 13px;
+        gap: 9px;
+    }
+
+    .dashboard-stat-icon {
+        width: 37px;
+        height: 37px;
+    }
+
+    .dashboard-stat-card strong {
+        font-size: 18px;
+    }
+
+    .dashboard-card {
+        padding: 17px;
+    }
+
+    .profile-grid,
+    .dashboard-saved-list {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-card-heading {
+        align-items: flex-start;
+    }
+
+}
+/* ========================================
+   EDIT PROFILE MODAL
+======================================== */
+
+.edit-profile-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(15, 23, 42, 0.58);
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    z-index: 9999;
+
+    backdrop-filter: blur(4px);
+
+}
+
+
+.edit-profile-modal.active {
+
+    display: flex;
+
+}
+
+
+/* ---------- MODAL BOX ---------- */
+
+.edit-profile-box {
+
+    position: relative;
+
+    width: 100%;
+    max-width: 560px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 20px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 25px 60px rgba(15, 23, 42, 0.20);
+
+    animation: editProfileOpen 0.2s ease;
+
+}
+
+
+@keyframes editProfileOpen {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(15px) scale(0.98);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0) scale(1);
+
+    }
+
+}
+
+
+/* ---------- CLOSE ---------- */
+
+.edit-profile-close {
+
+    position: absolute;
+
+    top: 18px;
+    right: 18px;
+
+    width: 38px;
+    height: 38px;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: #667085;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.2s;
+
+}
+
+
+.edit-profile-close:hover {
+
+    background: #f5f7ff;
+
+    color: #315efb;
+
+    border-color: #cfd8ff;
+
+}
+
+
+/* ---------- HEADER ---------- */
+
+.edit-profile-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding-right: 45px;
+
+    margin-bottom: 28px;
+
+}
+
+
+.edit-profile-icon {
+
+    width: 52px;
+    height: 52px;
+
+    flex-shrink: 0;
+
+    border-radius: 14px;
+
+    background: #eef2ff;
+
+    color: #315efb;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 21px;
+
+}
+
+
+.edit-profile-header h2 {
+
+    margin: 0 0 5px;
+
+    color: #172033;
+
+    font-size: 25px;
+
+}
+
+
+.edit-profile-header p {
+
+    margin: 0;
+
+    color: #667085;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+}
+
+
+/* ---------- FORM ---------- */
+
+.edit-profile-form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+}
+
+
+.edit-profile-field {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+}
+
+
+.edit-profile-field label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #344054;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+
+.edit-profile-field label i {
+
+    width: 18px;
+
+    color: #315efb;
+
+    text-align: center;
+
+}
+
+
+.edit-profile-field input,
+.edit-profile-field select {
+
+    width: 100%;
+
+    height: 46px;
+
+    padding: 0 13px;
+
+    border: 1px solid #d9dee8;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: #172033;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.2s;
+
+}
+
+
+.edit-profile-field input:focus,
+.edit-profile-field select:focus {
+
+    border-color: #315efb;
+
+    box-shadow:
+        0 0 0 3px rgba(49, 94, 251, 0.10);
+
+}
+
+
+.edit-profile-field input::placeholder {
+
+    color: #98a2b3;
+
+}
+
+
+.edit-profile-field small {
+
+    color: #98a2b3;
+
+    font-size: 11px;
+
+    margin-top: -2px;
+
+}
+
+
+/* ---------- ACTIONS ---------- */
+
+.edit-profile-actions {
+
+    display: flex;
+
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 8px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #edf0f5;
+
+}
+
+
+.edit-profile-cancel,
+.edit-profile-save {
+
+    min-height: 44px;
+
+    padding: 0 18px;
+
+    border-radius: 9px;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.edit-profile-cancel {
+
+    border: 1px solid #d9dee8;
+
+    background: #ffffff;
+
+    color: #475467;
+
+}
+
+
+.edit-profile-cancel:hover {
+
+    background: #f8fafc;
+
+}
+
+
+.edit-profile-save {
+
+    border: 1px solid #315efb;
+
+    background: #315efb;
+
+    color: #ffffff;
+
+}
+
+
+.edit-profile-save:hover {
+
+    background: #244bd3;
+
+    border-color: #244bd3;
+
+}
+
+
+/* ========================================
+   EDIT PROFILE BUTTON
+======================================== */
+
+.edit-profile-btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    min-height: 40px;
+
+    padding: 0 14px;
+
+    border: 1px solid #d8def0;
+
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    color: #315efb;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.edit-profile-btn:hover {
+
+    background: #eef2ff;
+
+    border-color: #c8d2ff;
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .edit-profile-modal {
+
+        padding: 12px;
+
+        align-items: center;
+
+    }
+
+
+    .edit-profile-box {
+
+        max-height: 94vh;
+
+        padding: 22px 18px;
+
+        border-radius: 16px;
+
+    }
+
+
+    .edit-profile-header {
+
+        gap: 11px;
+
+        margin-bottom: 22px;
+
+    }
+
+
+    .edit-profile-icon {
+
+        width: 44px;
+        height: 44px;
+
+        border-radius: 11px;
+
+        font-size: 18px;
+
+    }
+
+
+    .edit-profile-header h2 {
+
+        font-size: 21px;
+
+    }
+
+
+    .edit-profile-header p {
+
+        font-size: 12px;
+
+    }
+
+
+    .edit-profile-actions {
+
+        flex-direction: column-reverse;
+
+    }
+
+
+    .edit-profile-cancel,
+    .edit-profile-save {
+
+        width: 100%;
+
+    }
+
+}
+/* ========================================
+   APPLICATION TRACKER MODAL
+======================================== */
+
+.tracker-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(15, 23, 42, 0.58);
+
+    backdrop-filter: blur(4px);
+
+    z-index: 9998;
+
+}
+
+
+.tracker-modal.active {
+
+    display: flex;
+
+}
+
+
+/* ========================================
+   TRACKER MODAL BOX
+======================================== */
+
+.tracker-modal-box {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 720px;
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 25px 60px rgba(15, 23, 42, 0.20);
+
+    animation: trackerModalOpen 0.2s ease;
+
+}
+
+
+@keyframes trackerModalOpen {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(15px) scale(0.98);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0) scale(1);
+
+    }
+
+}
+
+
+/* ========================================
+   CLOSE BUTTON
+======================================== */
+
+.tracker-close {
+
+    position: absolute;
+
+    top: 18px;
+    right: 18px;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: #667085;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.tracker-close:hover {
+
+    background: #f5f7ff;
+
+    color: #315efb;
+
+    border-color: #cbd5ff;
+
+}
+
+
+/* ========================================
+   TRACKER HEADER
+======================================== */
+
+.tracker-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding-right: 45px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.tracker-header-icon {
+
+    width: 52px;
+    height: 52px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: #eef2ff;
+
+    color: #315efb;
+
+    font-size: 21px;
+
+}
+
+
+.tracker-header h2 {
+
+    margin: 0 0 5px;
+
+    color: #172033;
+
+    font-size: 25px;
+
+}
+
+
+.tracker-header p {
+
+    margin: 0;
+
+    color: #667085;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+}
+
+
+/* ========================================
+   TRACKER STATS
+======================================== */
+
+.tracker-stats {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.tracker-stat {
+
+    padding: 15px;
+
+    text-align: center;
+
+    background: #f8fafc;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 12px;
+
+}
+
+
+.tracker-stat strong {
+
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #172033;
+
+    font-size: 22px;
+
+}
+
+
+.tracker-stat span {
+
+    color: #667085;
+
+    font-size: 12px;
+
+}
+
+
+/* ========================================
+   ADD SECTION
+======================================== */
+
+.tracker-add-section {
+
+    padding: 20px;
+
+    margin-bottom: 25px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 14px;
+
+}
+
+
+.tracker-add-section h3 {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin: 0 0 14px;
+
+    color: #172033;
+
+    font-size: 15px;
+
+}
+
+
+.tracker-add-section h3 i {
+
+    color: #315efb;
+
+}
+
+
+/* ========================================
+   ADD FORM
+======================================== */
+
+.tracker-add-form {
+
+    display: grid;
+
+    grid-template-columns:
+        1fr 170px auto;
+
+    gap: 10px;
+
+}
+
+
+.tracker-add-form input {
+
+    width: 100%;
+
+    height: 44px;
+
+    padding: 0 12px;
+
+    border: 1px solid #d9dee8;
+
+    border-radius: 9px;
+
+    background: #ffffff;
+
+    color: #172033;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    outline: none;
+
+    transition: 0.2s;
+
+}
+
+
+.tracker-add-form input:focus {
+
+    border-color: #315efb;
+
+    box-shadow:
+        0 0 0 3px rgba(49, 94, 251, 0.10);
+
+}
+
+
+.tracker-add-form input::placeholder {
+
+    color: #98a2b3;
+
+}
+
+
+.tracker-add-form button {
+
+    height: 44px;
+
+    padding: 0 17px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 7px;
+
+    border: 1px solid #315efb;
+
+    border-radius: 9px;
+
+    background: #315efb;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.tracker-add-form button:hover {
+
+    background: #244bd3;
+
+    border-color: #244bd3;
+
+}
+
+
+/* ========================================
+   LIST HEADING
+======================================== */
+
+.tracker-list-heading {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 12px;
+
+}
+
+
+.tracker-list-heading h3 {
+
+    margin: 0;
+
+    color: #172033;
+
+    font-size: 16px;
+
+}
+
+
+/* ========================================
+   TRACKER LIST
+======================================== */
+
+.tracker-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+}
+
+
+/* ========================================
+   TRACKER ITEM
+======================================== */
+
+.tracker-item {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 16px;
+
+    background: #ffffff;
+
+    border: 1px solid #e3e8f0;
+
+    border-radius: 12px;
+
+    transition: 0.2s;
+
+}
+
+
+.tracker-item:hover {
+
+    border-color: #cfd8ff;
+
+    box-shadow:
+        0 5px 18px rgba(15, 23, 42, 0.05);
+
+}
+
+
+.tracker-item-info {
+
+    min-width: 0;
+
+    flex: 1;
+
+}
+
+
+.tracker-item-info h4 {
+
+    margin: 0 0 6px;
+
+    color: #172033;
+
+    font-size: 14px;
+
+    line-height: 1.4;
+
+}
+
+
+.tracker-item-info p {
+
+    margin: 0;
+
+    color: #667085;
+
+    font-size: 12px;
+
+}
+
+
+.tracker-item-actions {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    flex-shrink: 0;
+
+}
+
+
+/* ========================================
+   STATUS SELECT
+======================================== */
+
+.tracker-status {
+
+    height: 36px;
+
+    padding: 0 9px;
+
+    border: 1px solid #d9dee8;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #344054;
+
+    font-family: inherit;
+
+    font-size: 12px;
+
+    outline: none;
+
+    cursor: pointer;
+
+}
+
+
+.tracker-status:focus {
+
+    border-color: #315efb;
+
+}
+
+
+/* ========================================
+   DELETE BUTTON
+======================================== */
+
+.tracker-delete {
+
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #e4e7ec;
+
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    color: #667085;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+}
+
+
+.tracker-delete:hover {
+
+    background: #fff1f2;
+
+    color: #dc2626;
+
+    border-color: #fecdd3;
+
+}
+
+
+/* ========================================
+   EMPTY STATE
+======================================== */
+
+.tracker-empty {
+
+    padding: 40px 20px;
+
+    text-align: center;
+
+    border: 1px dashed #d9dee8;
+
+    border-radius: 12px;
+
+    background: #fafbfc;
+
+}
+
+
+.tracker-empty i {
+
+    margin-bottom: 12px;
+
+    color: #98a2b3;
+
+    font-size: 30px;
+
+}
+
+
+.tracker-empty h3 {
+
+    margin: 0 0 6px;
+
+    color: #344054;
+
+    font-size: 15px;
+
+}
+
+
+.tracker-empty p {
+
+    max-width: 380px;
+
+    margin: 0 auto;
+
+    color: #667085;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 650px) {
+
+    .tracker-modal {
+
+        padding: 12px;
+
+    }
+
+
+    .tracker-modal-box {
+
+        max-height: 94vh;
+
+        padding: 22px 18px;
+
+        border-radius: 16px;
+
+    }
+
+
+    .tracker-header {
+
+        gap: 11px;
+
+        margin-bottom: 20px;
+
+    }
+
+
+    .tracker-header-icon {
+
+        width: 44px;
+        height: 44px;
+
+        border-radius: 11px;
+
+        font-size: 18px;
+
+    }
+
+
+    .tracker-header h2 {
+
+        font-size: 21px;
+
+    }
+
+
+    .tracker-header p {
+
+        font-size: 12px;
+
+    }
+
+
+    .tracker-stats {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 8px;
+
+    }
+
+
+    .tracker-stat {
+
+        padding: 12px;
+
+    }
+
+
+    .tracker-stat strong {
+
+        font-size: 20px;
+
+    }
+
+
+    .tracker-add-form {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .tracker-add-form button {
+
+        width: 100%;
+
+    }
+
+
+    .tracker-item {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+    }
+
+
+    .tracker-item-actions {
+
+        width: 100%;
+
+    }
+
+
+    .tracker-status {
+
+        flex: 1;
+
+        width: 100%;
+
+    }
+
+
+    .tracker-delete {
+
+        flex-shrink: 0;
+
+    }
+
+}
